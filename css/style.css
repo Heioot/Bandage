@@ -1,0 +1,120 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Peso padrão */
+    color: #333;
+}
+
+/* Header Top */
+.header-top {
+    background-color: #2d2f48;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+}
+
+.contact-info {
+    display: flex;
+    font-weight: 500; /* Peso um pouco mais grosso, mas não exagerado */
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.contact-info img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.promotion {
+    font-size: 0.85em;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons span {
+    margin-right: 8px;
+}
+
+.social-icons a {
+    margin-left: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700; /* Peso mais grosso para o logo */
+    color: #2d2f48;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Garantir a exibição em linha */
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500; /* Peso médio */
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons a {
+    margin-left: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons span {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
