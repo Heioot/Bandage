@@ -8,13 +8,13 @@
 /* General styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400; /* Peso padrão */
+    font-weight: 700; /* Peso padrão */
     color: #333;
 }
 
 /* Header Top */
 .header-top {
-    background-color: #2d2f48;
+    background-color: #252B42;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -58,6 +58,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    margin-left: 16px;  /* Define o espaço entre os elementos */
 }
 
 /* Main Navigation */
@@ -86,33 +87,93 @@ body {
     margin: 0 10px;
 }
 
-.nav-links a {
+.nav-links a.nav-item {
+    color: #737373; /* Cor padrão para Home, About, Blog, Contact, Pages */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Navigation Links */
+.nav-links a.nav-item:hover {
+    color: #252B42; /* Cor para o efeito hover */
+}
+
+/* Estilo específico para o "Shop" */
+.nav-links .dropdown a.nav-item {
+    color: #252B42; /* Cor especial para Shop */
+    font-weight: 500;  /* Fonte um pouco mais fina para o Shop */
+}
+
+/* Dropdown Menu */
+.nav-links .dropdown {
+    position: relative; /* Necessário para posicionar o sub-menu */
+}
+
+.nav-links .dropdown a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .dropdown a img {
+    margin-left: 5px; /* Espaçamento entre o texto e a seta */
+}
+
+/* Esconder o dropdown por padrão */
+.nav-links .dropdown-menu {
+    display: none; /* Escondendo o menu */
+    position: absolute;
+    top: 100%; /* Coloca o menu logo abaixo do item */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-width: 160px; /* Largura mínima do dropdown */
+    z-index: 1000;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block; /* Exibe o menu ao passar o mouse sobre o item */
+}
+
+.nav-links .dropdown-menu li {
+    list-style: none;
+}
+
+.nav-links .dropdown-menu a {
+    display: block;
+    padding: 10px;
     color: #333;
     text-decoration: none;
-    font-size: 1em;
-    font-weight: 500; /* Peso médio */
+    font-size: 0.9em;
 }
 
+.nav-links .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Nav Icons */
 .nav-icons {
     display: flex;
+    gap: 15px; /* Alterado o espaçamento para 15px entre os ícones */
     align-items: center;
 }
 
-.nav-icons a {
-    margin-left: 15px;
-    color: #007bff;
+.nav-icons a.nav-icon {
+    color: #23A6F0; /* Novo azul para ícones */
     text-decoration: none;
     font-size: 1em;
-    position: relative;
     display: flex;
     align-items: center;
+}
+
+.nav-icons a.nav-icon img {
+    margin-right: 8px; /* Adicionando espaçamento entre o ícone e o texto */
 }
 
 .nav-icons span {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: #007bff;
+    background-color: #23A6F0; /* Novo azul para o badge */
     color: #fff;
     font-size: 0.8em;
     padding: 2px 6px;
