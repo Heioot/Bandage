@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Bandage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="icon" href="assets/icons/uol_icon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Header Section -->
     <header class="header-top">
         <div class="contact-info">
             <span class="telefone">
-                <img src="assets/icons/phone.svg" alt="Ícone de Telefone"> (225) 555-0118
+                <img src="assets/icons/phone.svg" alt="Ícone de Telefone">
+                <span>(225) 555-0118</span>
             </span>
             <span class="email">
-                <img src="assets/icons/email.svg" alt="Ícone de Email"> michelle.rivera@example.com
+                <img src="assets/icons/email.svg" alt="Ícone de Email">
+                <span>michelle.rivera@example.com</span>
             </span>
         </div>
         <div class="promotion">
-            Siga-nos e tenha a chance de ganhar 80% de desconto
+            <h5 style="font-size: 14px;">Siga-nos e tenha a chance de ganhar 80% de desconto</h5>
         </div>
         <div class="social-icons">
             <span>Follow Us :</span>
-            <a href="https://www.instagram.com" aria-label="Instagram" ><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-            <a href="https://www.youtube.com" aria-label="YouTube" ><img src="assets/icons/youtube.svg" alt="YouTube"></a>
-            <a href="https://www.facebook.com" aria-label="Facebook" ><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-            <a href="https://www.twitter.com" aria-label="Twitter" ><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+            <a href="https://www.youtube.com" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+            <a href="https://www.facebook.com" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.twitter.com" aria-label="Twitter"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
         </div>
     </header>
 
     <!-- Navigation Section -->
     <nav class="main-nav">
-        <div class="logo">Bandage</div>
+        <div class="logo"><h3>Bandage</h3></div>
         <ul class="nav-links">
             <li><a href="#" class="nav-item">Home</a></li>
             <li class="dropdown">
@@ -55,14 +57,47 @@
         <div class="nav-icons">
             <a href="#" aria-label="Login / Register" class="nav-icon"><img src="assets/icons/login.svg" alt="Login / Register"> Login / Register</a>
             <a href="#" aria-label="Search" class="nav-icon"><img src="assets/icons/search.svg" alt="Ícone de Pesquisa"></a>
-            <a href="#" aria-label="Cart" class="nav-icon"><img src="assets/icons/shopping-cart.svg" alt="Ícone do Carrinho"> <span>1</span></a>
-            <a href="#" aria-label="Wishlist" class="nav-icon"><img src="assets/icons/favorite.svg" alt="Ícone de Lista de Desejos"> <span>1</span></a>
+            <a href="#" aria-label="Cart" class="nav-icon"><img src="assets/icons/shopping-cart.svg" alt="Ícone do Carrinho"><span>1</span></a>
+            <a href="#" aria-label="Wishlist" class="nav-icon"><img src="assets/icons/favorite.svg" alt="Ícone de Lista de Desejos"><span>1</span></a>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Conteúdo principal do site -->
-    </main>
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-slide active">
+                <img src="assets/images/carousel-1.jpg" alt="Imagem 1">
+                <div class="carousel-content">
+                    <h5>SUMMER 2020</h5>
+                    <h1>NEW COLLECTION</h1>
+                    <h4>We know how large objects will act, but things on a small scale.</h4>
+                    <button class="shop-now">SHOP NOW</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel-2.jpg" alt="Imagem 2">
+                <div class="carousel-content">
+                    <h5>WINTER 2020</h5>
+                    <h1>EXCLUSIVE COLLECTION</h1>
+                    <h4>Experience warmth and style with our exclusive winter collection.</h4>
+                    <button class="shop-now">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <!-- Indicador do Carrossel -->
+        <div class="carousel-indicator">
+            <div class="indicator-dot active"></div>
+            <div class="indicator-dot"></div>
+        </div>
+        <!-- Setas de navegação -->
+        <button class="carousel-arrow prev">
+            <img src="assets/icons/prev-arrow.svg" alt="Seta Esquerda">
+        </button>
+        <button class="carousel-arrow next">
+            <img src="assets/icons/next-arrow.svg" alt="Seta Direita">
+        </button>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

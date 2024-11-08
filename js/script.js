@@ -1,30 +1,29 @@
-// script.js
-
-const indicators = document.querySelectorAll('.carousel-indicator .indicator');
 let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const indicators = document.querySelectorAll('.indicator-dot');
+const slideInterval = 10000; // 10 seconds
 
-// Função para atualizar o indicador de posição
-function updateIndicator() {
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentIndex);
+function updateCarousel() {
+    slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentIndex);
+    });
+    indicators.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
     });
 }
 
-// Função para ir para o próximo slide
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % indicators.length;
-    updateIndicator();
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
 }
 
-// Função para ir para o slide anterior
-function previousSlide() {
-    currentIndex = (currentIndex - 1 + indicators.length) % indicators.length;
-    updateIndicator();
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
 }
 
-// Adiciona eventos de clique às setas
-document.querySelector('.left-arrow').addEventListener('click', previousSlide);
-document.querySelector('.right-arrow').addEventListener('click', nextSlide);
+document.querySelector('.carousel-arrow.next').addEventListener('click', nextSlide);
+document.querySelector('.carousel-arrow.prev').addEventListener('click', prevSlide);
 
-// Inicializa o indicador de posição
-updateIndicator();
+setInterval(nextSlide, slideInterval);
+updateCarousel();

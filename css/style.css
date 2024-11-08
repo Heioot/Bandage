@@ -8,7 +8,7 @@
 /* General styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Peso padrão */
+    font-weight: 700;
     color: #333;
 }
 
@@ -20,28 +20,27 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
 .contact-info {
     display: flex;
-    font-weight: 500; /* Peso um pouco mais grosso, mas não exagerado */
 }
 
 .contact-info span {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-left: 10px; /* Define o gap de 10px entre telefone e e-mail */
+    font-size: 14px;
 }
 
-.contact-info img {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
+.contact-info span:last-child {
+    margin-right: 0;
 }
+
 
 .promotion {
-    font-size: 0.85em;
+    font-size: 14px;
 }
 
 .social-icons {
@@ -57,7 +56,6 @@ body {
     margin-left: 8px;
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
     margin-left: 16px;  /* Define o espaço entre os elementos */
 }
 
@@ -73,14 +71,14 @@ body {
 }
 
 .logo {
-    font-size: 1.5em;
-    font-weight: 700; /* Peso mais grosso para o logo */
+    font-size: 24px;
     color: #2d2f48;
 }
 
 .nav-links {
     list-style: none;
     display: flex; /* Garantir a exibição em linha */
+    margin-right: 700px ;
 }
 
 .nav-links li {
@@ -153,12 +151,12 @@ body {
 /* Nav Icons */
 .nav-icons {
     display: flex;
-    gap: 15px; /* Alterado o espaçamento para 15px entre os ícones */
+    gap: 15px;
     align-items: center;
 }
 
 .nav-icons a.nav-icon {
-    color: #23A6F0; /* Novo azul para ícones */
+    color: #23A6F0;
     text-decoration: none;
     font-size: 1em;
     display: flex;
@@ -173,7 +171,7 @@ body {
     position: absolute;
     top: -5px;
     right: -10px;
-    background-color: #23A6F0; /* Novo azul para o badge */
+    background-color: #23A6F0;
     color: #fff;
     font-size: 0.8em;
     padding: 2px 6px;

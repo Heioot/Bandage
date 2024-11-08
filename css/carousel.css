@@ -1,0 +1,136 @@
+/* Estilos do Carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 715px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    width: 100%;
+    display: none;
+    position: relative;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 716px;
+    object-fit: cover;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 28%;
+    left: 15%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carousel-content h1 {
+    font-size: 58px;
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.carousel-content h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.carousel-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.carousel-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+
+.shop-now {
+    background-color: #2DC071;
+    color: white;
+    height: 62px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para múltiplos efeitos */
+}
+
+.shop-now:hover {
+    background-color: #29A765; /* Cor levemente mais escura */
+    transform: scale(1.05); /* Aumenta ligeiramente */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+
+/* Indicador do Carrossel */
+.carousel-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    gap: 2px;
+}
+
+.indicator-dot {
+    width: 62px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s;
+}
+
+.indicator-dot.active {
+    background-color: white;
+}
+
+/* Setas de Navegação */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transição suave em todos os momentos */
+}
+
+.carousel-arrow:hover {
+    transform: translateY(-50%) scale(1.2); /* Aumenta levemente */
+}
+
+.carousel-arrow img {
+    width: 23.87px;
+    height: 44.07px;
+}
+
+.carousel-arrow.prev {
+    left: 24px;
+}
+
+.carousel-arrow.next {
+    right: 24px;
+}
