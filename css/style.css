@@ -10,6 +10,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #333;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
 }
 
 /* Header Top */
@@ -30,14 +31,9 @@ body {
 .contact-info span {
     display: flex;
     align-items: center;
-    margin-left: 10px; /* Define o gap de 10px entre telefone e e-mail */
+    margin-left: 10px;
     font-size: 14px;
 }
-
-.contact-info span:last-child {
-    margin-right: 0;
-}
-
 
 .promotion {
     font-size: 14px;
@@ -48,15 +44,10 @@ body {
     align-items: center;
 }
 
-.social-icons span {
-    margin-right: 8px;
-}
-
 .social-icons a {
-    margin-left: 8px;
+    margin-left: 16px;
     color: #fff;
     text-decoration: none;
-    margin-left: 16px;  /* Define o espaço entre os elementos */
 }
 
 /* Main Navigation */
@@ -68,6 +59,8 @@ body {
     background-color: #fff;
     color: #333;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
@@ -77,34 +70,28 @@ body {
 
 .nav-links {
     list-style: none;
-    display: flex; /* Garantir a exibição em linha */
-    margin-right: 700px ;
+    display: flex;
+    margin-right: 700px;
 }
 
 .nav-links li {
     margin: 0 10px;
+    position: relative;
 }
 
 .nav-links a.nav-item {
-    color: #737373; /* Cor padrão para Home, About, Blog, Contact, Pages */
+    color: #737373;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Hover Effect for Navigation Links */
 .nav-links a.nav-item:hover {
-    color: #252B42; /* Cor para o efeito hover */
-}
-
-/* Estilo específico para o "Shop" */
-.nav-links .dropdown a.nav-item {
-    color: #252B42; /* Cor especial para Shop */
-    font-weight: 500;  /* Fonte um pouco mais fina para o Shop */
+    color: #252B42;
 }
 
 /* Dropdown Menu */
 .nav-links .dropdown {
-    position: relative; /* Necessário para posicionar o sub-menu */
+    position: relative;
 }
 
 .nav-links .dropdown a {
@@ -113,23 +100,23 @@ body {
 }
 
 .nav-links .dropdown a img {
-    margin-left: 5px; /* Espaçamento entre o texto e a seta */
+    margin-left: 5px;
 }
 
-/* Esconder o dropdown por padrão */
 .nav-links .dropdown-menu {
-    display: none; /* Escondendo o menu */
+    display: none;
     position: absolute;
-    top: 100%; /* Coloca o menu logo abaixo do item */
+    top: 100%;
     left: 0;
     background-color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    min-width: 160px; /* Largura mínima do dropdown */
+    min-width: 160px;
+    border-radius: 5px;
     z-index: 1000;
 }
 
 .nav-links .dropdown:hover .dropdown-menu {
-    display: block; /* Exibe o menu ao passar o mouse sobre o item */
+    display: block;
 }
 
 .nav-links .dropdown-menu li {
@@ -138,10 +125,10 @@ body {
 
 .nav-links .dropdown-menu a {
     display: block;
-    padding: 10px;
+    padding: 10px 20px;
     color: #333;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
 .nav-links .dropdown-menu a:hover {
@@ -164,7 +151,7 @@ body {
 }
 
 .nav-icons a.nav-icon img {
-    margin-right: 8px; /* Adicionando espaçamento entre o ícone e o texto */
+    margin-right: 8px;
 }
 
 .nav-icons span {
@@ -176,4 +163,181 @@ body {
     font-size: 0.8em;
     padding: 2px 6px;
     border-radius: 50%;
+}
+
+/* Editor's Pick Section */
+.editors-pick {
+    text-align: center;
+    margin: 50px 0;
+    padding: 50px 20px;
+    background-color: #FAFAFA;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #252B42;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #737373;
+    margin-bottom: 40px;
+}
+
+.editor-grid {
+    display: grid;
+    grid-template-columns: 509px 240px 240px; /* Largura das colunas */
+    grid-template-rows: 242px 242px;
+    gap: 20px;
+    justify-content: center;
+    align-items: start; /* Alinhamento ao topo */
+    margin: 0 auto;
+}
+
+/* Especificações cards */
+.men-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3; /* Ocupa duas linhas */
+    width: 509px;
+    height: 509px;
+}
+
+.women-card {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; /* Alinhado com o card Men */
+    width: 240px;
+    height: 509px;
+}
+
+.accessories-card {
+    grid-column: 3 / 3;
+    grid-row: 1 / 2; /* Fica na primeira linha */
+    width: 240px;
+    height: 242px;
+}
+
+.kids-card {
+    grid-column: 3 / 3;
+    grid-row: 2 / 3; /* Posicionado diretamente abaixo do Accessories */
+    width: 240px;
+    height: 247px;
+    margin-top: 0; /* Remove qualquer margem extra */
+}
+
+/* Estilo para os cards */
+.editor-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.editor-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-label {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #252B42;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+
+/* Best Seller Products Section */
+.bestseller-products {
+    text-align: center;
+    margin: 50px 0;
+    padding: 50px 10%;
+    background-color: #FAFAFA;
+}
+
+.bestseller-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-card h4 {
+    font-size: 18px;
+    color: #252B42;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #737373;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.product-card .original-price {
+    text-decoration: line-through;
+    color: #737373;
+    margin-right: 5px;
+}
+
+.product-card .discounted-price {
+    color: #23856D;
+    font-weight: 700;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.color-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #ddd;
+    cursor: pointer;
 }
