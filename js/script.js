@@ -32,11 +32,24 @@ function initializeCarousel(carouselId) {
         });
     });
 
+    let autoPlay = setInterval(() => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+    }, 5000);
+    
+    carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    carousel.addEventListener('mouseleave', () => {
+        autoPlay = setInterval(() => {
+            index = (index + 1) % slides.length;
+            updateCarousel();
+        }, 5000);
+    });
+
     updateCarousel();
 }
 
 // Inicializar ambos os carrosséis
-initializeCarousel('first-carousel'); // Certifique-se de adicionar um ID ao primeiro carrossel no HTML
+initializeCarousel('first-carousel');
 initializeCarousel('second-carousel');
 
 
