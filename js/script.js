@@ -38,3 +38,22 @@ function initializeCarousel(carouselId) {
 // Inicializar ambos os carrosséis
 initializeCarousel('first-carousel'); // Certifique-se de adicionar um ID ao primeiro carrossel no HTML
 initializeCarousel('second-carousel');
+
+
+//validação email.
+
+document.getElementById("email-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Evita o envio padrão do formulário
+    const emailInput = document.getElementById("email");
+    const email = emailInput.value.trim();
+
+    // Regex para validar o formato do e-mail
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;            // Deve conter um @ ; começar sem espaços; texto após e antes o "."
+
+    if (emailRegex.test(email)) {
+        alert("Email válido! Obrigado por se inscrever.");
+        emailInput.value = ""; // Limpa o campo após validação
+    } else {
+        alert("Por favor, insira um e-mail válido.");
+    }
+});
