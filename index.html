@@ -71,15 +71,16 @@
     </nav>
 
 
-    <!-- Carousel Section -->
-    <div class="carousel">
+    <main>
+            <!-- Carousel Section -->
+    <div id="first-carousel" class="carousel">
         <div class="carousel-inner">
             <div class="carousel-slide active">
                 <img src="assets/images/carousel-1.jpg" alt="Imagem 1">
                 <div class="carousel-content">
                     <h5>SUMMER 2020</h5>
                     <h1>NEW COLLECTION</h1>
-                    <h4>We know how large objects will act, but things on a small scale.</h4>
+                    <h4 style="font-weight: 300;">We know how large objects will act, <p>but things on a small scale.</p></h4>
                     <button class="shop-now">SHOP NOW</button>
                 </div>
             </div>
@@ -88,7 +89,7 @@
                 <div class="carousel-content">
                     <h5>WINTER 2020</h5>
                     <h1>EXCLUSIVE COLLECTION</h1>
-                    <h4>Experience warmth and style with our exclusive winter collection.</h4>
+                    <h4 style="font-weight: 300;">Experience warmth and style with our exclusive winter collection.</h4>
                     <button class="shop-now">SHOP NOW</button>
                 </div>
             </div>
@@ -247,11 +248,77 @@
             </div>
         </div>
     </section>
+
+    <!-- Segundo Carousel -->
+    <div id="second-carousel" class="carousel">
+        <div class="carousel-inner">
+            <!-- Primeiro Slide -->
+            <div class="carousel-slide active" style="background-color: #23856D; position: relative;">
+                <img src="assets/images/carousel-3.png" alt="Imagem 3" class="carousel-image" style="width: 24%; margin-left: 1050px">
+                <div class="carousel-content">
+                    <h5>SUMMER 2020</h5>
+                    <h1><P>Vita Classic</P> Product</h1>
+                    <h4 style="font-size: 14px; font-weight: 300;"><p>We know how large objects will act, We know</p> how are objects will act</h4>
+                    <div class="action-section">
+                        <h3 class="price-text">$16.48</h3>
+                        <button class="shop-now" style="margin-bottom: 50px;">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Segundo Slide -->
+            <div class="carousel-slide active" style="background-color: purple; position: relative;">
+                <img src="assets/images/carousel-3.png" alt="Imagem 4" class="carousel-image" style="width: 24%; margin-left: 1050px">
+                <div class="carousel-content">
+                    <h5>SPRING 2020</h5>
+                    <h1><P>Vita Classic</P> Product</h1>
+                    <h4 style="font-size: 14px; font-weight: 300;"><p>We know how large objects will act, We know</p> how are objects will act</h4>
+                    <div class="action-section">
+                        <h3 class="price-text">$16.48</h3>
+                        <button class="shop-now" style="margin-bottom: 50px;">SHOP NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Indicador do Carrossel -->
+        <div class="carousel-indicator">
+            <div class="indicator-dot active"></div>
+            <div class="indicator-dot"></div>
+        </div>
+        <!-- Setas de navegação -->
+        <button class="carousel-arrow prev">
+            <img src="assets/icons/prev-arrow.svg" alt="Seta Esquerda">
+        </button>
+        <button class="carousel-arrow next">
+            <img src="assets/icons/next-arrow.svg" alt="Seta Direita">
+        </button>
+    </div>
+
+
+    <!-- Neural Universe Section -->
+        <section class="neural-universe">
+            <div class="neural-universe-container">
+                <div class="neural-universe-image">
+                    <img src="assets/images/couple.png" alt="Neural Universe">
+                </div>
+                <div class="neural-universe-text">
+                    <h5>SUMMER 2020</h5>
+                    <h2>Part of the Neural Universe</h2>
+                    <p>We know how large objects will act,</p>
+                    <p>but things on a small scale</p>
+                    <div class="buttons">
+                        <button class="buy-now">BUY NOW</button>
+                        <button class="read-more">READ MORE</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
     
 
 
 
-
+        
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>

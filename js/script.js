@@ -1,29 +1,40 @@
-let currentIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const indicators = document.querySelectorAll('.indicator-dot');
-const slideInterval = 10000; // 10 seconds
+function initializeCarousel(carouselId) {
+    const carousel = document.querySelector(`#${carouselId}`);
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const indicators = carousel.querySelectorAll('.indicator-dot');
+    const prevButton = carousel.querySelector('.prev');
+    const nextButton = carousel.querySelector('.next');
+    let index = 0;
 
-function updateCarousel() {
-    slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === currentIndex);
-    });
-    indicators.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentIndex);
-    });
-}
+    function updateCarousel() {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        indicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
+    nextButton.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+    indicators.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            index = i;
+            updateCarousel();
+        });
+    });
+
     updateCarousel();
 }
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-}
-
-document.querySelector('.carousel-arrow.next').addEventListener('click', nextSlide);
-document.querySelector('.carousel-arrow.prev').addEventListener('click', prevSlide);
-
-setInterval(nextSlide, slideInterval);
-updateCarousel();
+// Inicializar ambos os carrosséis
+initializeCarousel('first-carousel'); // Certifique-se de adicionar um ID ao primeiro carrossel no HTML
+initializeCarousel('second-carousel');

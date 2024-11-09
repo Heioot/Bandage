@@ -341,3 +341,120 @@ body {
     border: 1px solid #ddd;
     cursor: pointer;
 }
+
+
+
+
+.neural-universe-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+
+/* Neural Universe Section */
+/* Container */
+.neural-universe-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Conteúdo */
+.neural-universe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.neural-universe-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+}
+
+
+/* Estilo para a imagem na seção Neural Universe */
+.neural-universe img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    display: block;
+    margin-right: auto;
+    margin-left: 1%;
+}
+
+.neural-universe-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.neural-universe-text h5 {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.neural-universe-text h2 {
+    font-size: 40px;
+    color: #252b42;
+    margin-bottom: 20px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.neural-universe-text p {
+    font-size: 16px;
+    color: #737373;
+    font-weight: 400;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10%;
+}
+
+.buy-now, .read-more {
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.buy-now {
+    background-color: #2DC071;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.buy-now:hover {
+    background-color: #2DC071;
+}
+
+.read-more {
+    background-color: transparent;
+    border: 2px solid #2DC071;
+    color: #2DC071;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px; /* Bordas arredondadas */
+
+}
+
+.read-more:hover {
+    background-color: #2DC071;
+    color: #fff;
+}
+
+
