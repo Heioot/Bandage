@@ -177,12 +177,14 @@ body {
     font-size: 24px;
     color: #252B42;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .section-subtitle {
     font-size: 16px;
     color: #737373;
     margin-bottom: 40px;
+    font-weight: 400;
 }
 
 .editor-grid {
