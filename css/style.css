@@ -672,8 +672,7 @@ body {
 .footer-bottom {
     padding: 10px 20px;
     margin-top: 30px;
-    width: 100vw; /* Garante que o fundo cinza ocupe toda a largura */
-    box-sizing: border-box; /* Inclui padding e margem na largura */
+    box-sizing: border-box;
 }
 
 .footer-bottom p.made-with-love {
@@ -682,7 +681,7 @@ body {
     color: #737373;
     margin: 0;
     max-width: 100%;
-    margin-left: 17%;
+    margin-left: 17.5%;
 }
 
 #email-form {
