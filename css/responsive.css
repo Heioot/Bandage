@@ -560,47 +560,47 @@
 /* Footer Mobile */
 @media (max-width: 768px) {
     .footer-columns {
-        grid-template-columns: 1fr; /* Cada coluna ocupa 100% */
-        gap: 20px; /* Espaçamento entre colunas */
-        text-align: left; /* Alinha os textos à esquerda */
+        grid-template-columns: 100%;
+        gap: 20px;
+        text-align: left;
     }
 
     .footer-column {
-        text-align: left; /* Alinha os textos à esquerda */
+        text-align: left;
     }
 
     .footer-column h4 {
-        margin-top: 20px; /* Adiciona espaçamento no título */
+        margin-top: 20px;
     }
 
     #email-form {
-        flex-direction: column; /* Deixa o formulário vertical */
+        flex-direction: column;
         gap: 10px;
-        text-align: left; /* Alinha o formulário à esquerda */
+        text-align: left;
     }
 
     #email-form input {
-        width: 100%; /* Ajusta a largura */
+        width: 100%;
     }
 
     #email-form button {
-        width: 100%; /* Ajusta a largura */
+        width: 100%;
     }
 
     .footer-logo {
         display: flex;
-        flex-direction: column; /* Empilha logo e ícones */
+        flex-direction: column;
         gap: 15px;
         text-align: left; /* Alinha o logo e ícones à esquerda */
         margin-right: 230px;
     }
 
     .social-icons {
-        justify-content: flex-start; /* Alinha os ícones de redes sociais à esquerda */
+        justify-content: flex-start; /*ícones de redes sociais à esquerda */
     }
 
     .footer-bottom {
-        text-align: center; /* Mantém o texto "Made With Love" no centro */
+        text-align: center; /* "Made With Love"  centro */
     }
 
     /* Exceção para o Get in Touch */
@@ -609,13 +609,13 @@
     }
 
     .footer-column:nth-child(5) #email-form {
-        text-align: center; /* Centraliza o formulário dentro do "Get in Touch" */
+        text-align: center; /*  "Get in Touch" */
     }
 
     .footer-column:nth-child(5) #email-form input,
     .footer-column:nth-child(5) #email-form button {
-        width: 80%; /* Mantém os inputs centralizados e em largura adequada */
-        margin: 0 auto; /* Centraliza os elementos no formulário */
+        width: 80%;
+        margin: 0 auto; 
     }
 }
 
