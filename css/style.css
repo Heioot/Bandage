@@ -692,7 +692,6 @@ body {
 #email-form {
     display: flex;
     flex-direction: row;
-    gap: 10px;
 }
 
 #email-form input {

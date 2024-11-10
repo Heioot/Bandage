@@ -67,7 +67,7 @@
     }
 }
 
-/* Corrige o overflow horizontal no mobile */
+/* Fix overflow horizontal mobile */
 @media (max-width: 768px) {
     html, body {
         overflow-x: hidden; /* Garante que o conteúdo não exceda a largura da tela */
@@ -544,8 +544,8 @@
 
     .post-image img {
         width: 100%; 
-        height: 100%; /* Ajusta a imagem para ocupar a altura fixa */
-        object-fit: cover; /* Garante que a imagem mantenha a proporção sem deformar */
+        height: 100%;
+        object-fit: cover;
     }
 
     .post-content {
@@ -577,48 +577,41 @@
     }
 
     #email-form {
-        flex-direction: column;
-        gap: 10px;
-        text-align: left;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        align-items: center;
     }
 
     #email-form input {
-        width: 100%;
+        width: 50%;
+        border-radius: 4px 0 0 4px;
     }
 
     #email-form button {
-        width: 100%;
+        width: 30%;
+        border-radius: 0 4px 4px 0; /* Bordas arredondadas à direita */
+    }
+
+    #email-form + p {
+        margin-top: 10px;
+        text-align: left;
     }
 
     .footer-logo {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        text-align: left; /* Alinha o logo e ícones à esquerda */
+        text-align: left;
         margin-right: 230px;
     }
 
     .social-icons {
-        justify-content: flex-start; /*ícones de redes sociais à esquerda */
+        justify-content: flex-start; /* Ícones de redes sociais à esquerda */
     }
 
     .footer-bottom {
-        text-align: center; /* "Made With Love"  centro */
-    }
-
-    /* Exceção para o Get in Touch */
-    .footer-column:nth-child(5) {
-        text-align: center; /* Alinha o "Get in Touch" ao centro */
-    }
-
-    .footer-column:nth-child(5) #email-form {
-        text-align: center; /*  "Get in Touch" */
-    }
-
-    .footer-column:nth-child(5) #email-form input,
-    .footer-column:nth-child(5) #email-form button {
-        width: 80%;
-        margin: 0 auto; 
+        text-align: center; /* "Made With Love" no centro */
     }
 }
 
