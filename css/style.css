@@ -589,13 +589,13 @@ body {
     text-decoration: none;
     font-weight: bold;
     display: inline-flex; /* Para alinhar o texto e o ícone */
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center;
     gap: 5px; /* Espaçamento entre o texto e o ícone */
     transition: color 0.3s ease;
 }
 
 .learn-more img {
-    width: 12px; /* Tamanho do ícone */
+    width: 12px;
     height: auto;
 }
 

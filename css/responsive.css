@@ -450,17 +450,17 @@
 
     .neural-universe-text {
         text-align: center; /* Centraliza os textos */
-        margin: 0 auto; /* Centraliza horizontalmente */
+        margin: 0 auto; 
     }
 
     .neural-universe-text h5 {
-        font-size: 14px; /* Ajusta o tamanho da fonte */
+        font-size: 14px; 
         color: #999;
         margin-bottom: 8px;
     }
 
     .neural-universe-text h2 {
-        font-size: 28px; /* Ajusta o tamanho do título */
+        font-size: 28px; 
         color: #252b42;
         margin: 15px 0;
     }
@@ -506,13 +506,13 @@
 
     .neural-universe-image {
         position: absolute;
-        margin-top: 320px; /* Espaçamento acima da imagem */
+        margin-top: 320px; 
         width: 100%;
     }
 
     .neural-universe-image img {
         width: 100%;
-        max-width: 350px; /* Limita a largura da imagem */
+        max-width: 350px; 
         height: auto;
         border-radius: 8px;
     }
