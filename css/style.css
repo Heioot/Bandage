@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*sobrepondo a formatação original do browsers */
 }
 
 /* General styles */
@@ -389,7 +389,7 @@ body {
 .neural-universe img {
     width: 100%;
     height: 600px;
-    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    object-fit: cover;
     display: block;
     margin-right: auto;
     margin-left: 1%;
@@ -482,6 +482,7 @@ body {
     margin-bottom: 10px;
 }
 
+
 .featured-posts-header .description {
     font-size: 16px;
     color: #737373;
@@ -519,7 +520,7 @@ body {
 
 .post-image img {
     width: 100%;
-    max-width: 348px; /* Limita a largura da imagem */
+    max-width: 100%px; /* Limita a largura da imagem */
     height: 100%; /* Garante que a imagem ocupe todo o espaço */
     object-fit: cover; /* Centraliza e ajusta a imagem sem distorcer */
     display: block;
@@ -552,7 +553,7 @@ body {
     font-size: 20px;
     color: #252B42;
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .post-content p {
@@ -562,7 +563,6 @@ body {
     font-weight: 700;
 }
 
-/* Atualização para post-meta */
 .post-meta {
     display: flex;
     gap: 15px; /* Espaçamento entre os ícones */
@@ -611,7 +611,7 @@ body {
     font-weight: 400;
 }
 
-/* Estilo para o Footer */
+/* Footer Section */
 .footer {
     background-color: #FAFAFA;
     padding: 50px 20px;
