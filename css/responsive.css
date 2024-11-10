@@ -1,0 +1,158 @@
+/* Esconde a versão mobile no desktop */
+.mobile-nav {
+    display: none;
+}
+
+/* Esconde a versão desktop no mobile */
+.main-nav {
+    display: flex;
+}
+
+/* Remove o header-top no mobile */
+@media (max-width: 768px) {
+    .header-top {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu .nav-item {
+        font-size: 18px;
+        font-weight: 500;
+        color: #737373;
+        text-decoration: none;
+    }
+
+    .mobile-menu .nav-item:hover {
+        color: #252B42;
+    }
+}
+
+/* Corrige o overflow horizontal no mobile */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden; /* Garante que o conteúdo não exceda a largura da tela */
+    }
+
+    /* Certifique-se de que elementos não excedam a largura */
+    * {
+        max-width: 100%;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        object-fit: cover; /* Ajusta a imagem sem deformar */
+    }
+
+    .carousel-inner {
+        display: block; /* Evita que o carrossel ultrapasse os limites */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 753px; /* Define a altura fixa */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 753px; /* Ajusta a altura */
+        object-fit: cover; /* Mantém a proporção sem distorcer */
+    }
+
+    .carousel-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        z-index: 2; /* Coloca o texto acima da imagem */
+        padding: 0 20px; /* Adiciona margem para textos longos */
+    }
+
+    .carousel-content h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-content h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .carousel-content h4 {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .shop-now {
+        margin-top: 20px;
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .carousel-indicator {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .indicator-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .indicator-dot.active {
+        background-color: #fff;
+    }
+}
+
+

@@ -70,3 +70,9 @@ document.getElementById("email-form").addEventListener("submit", function (e) {
         alert("Por favor, insira um e-mail válido.");
     }
 });
+
+// Toggle para o menu mobile
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    const menu = document.querySelector('.mobile-menu');
+    menu.classList.toggle('active');
+});
