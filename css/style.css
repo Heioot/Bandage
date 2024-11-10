@@ -461,6 +461,7 @@ body {
     color: #fff;
 }
 
+
 /* Featured Posts Section */
 .featured-posts {
     text-align: center;
@@ -714,3 +715,5 @@ body {
 #email-form button:hover {
     background-color: #1E90FF;
 }
+
+

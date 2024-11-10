@@ -143,6 +143,7 @@
         transform: translateX(-50%);
         display: flex;
         gap: 10px;
+        display: none;
     }
 
     .indicator-dot {
@@ -298,5 +299,260 @@
         border-radius: 50%;
         background-color: #ddd; /* Cor padrão */
         border: 1px solid #ccc;
+    }
+}
+
+/* Second Carousel Mobile */
+@media (max-width: 768px) {
+    #second-carousel {
+        height: 100vh; /* Altura total do viewport */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #second-carousel .carousel-slide {
+        display: none; /* Esconde os slides inicialmente */
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; /* Distribui os elementos no slide */
+        height: 100%; /* Ocupa toda a altura do carrossel */
+        width: 100%; /* Ocupa toda a largura */
+        padding: 20px;
+        text-align: center;
+    }
+
+    #second-carousel .carousel-slide.active {
+        display: flex; /* Exibe apenas o slide ativo */
+        background-color: inherit; /* Herda o fundo da cor principal */
+    }
+
+    #second-carousel .carousel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        z-index: 2;
+    }
+
+    #second-carousel .carousel-content h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    #second-carousel span{
+        font-size: 24px;
+    }
+
+    #second-carousel .carousel-content h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    #second-carousel .carousel-content p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    #second-carousel .price-text {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #second-carousel .shop-now {
+        padding: 12px 24px;
+        font-size: 16px;
+        background-color: #2DC071;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #second-carousel .shop-now:hover {
+        background-color: #29A765;
+    }
+
+    #second-carousel .carousel-slide img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #second-carousel .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    #second-carousel .carousel-arrow.prev {
+        left: 10px;
+    }
+
+    #second-carousel .carousel-arrow.next {
+        right: 10px;
+    }
+
+    #second-carousel .carousel-arrow img {
+        width: 20px;
+        height: auto;
+    }
+
+    #second-carousel .carousel-indicator {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+    }
+
+    #second-carousel .indicator-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        display: none;
+    }
+
+    #second-carousel .indicator-dot.active {
+        background-color: #fff;
+    }
+}
+
+/* Neural Universe Mobile */
+@media (max-width: 768px) {
+    .neural-universe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .neural-universe-container {
+        max-width: 350px; /* Limita a largura do conteúdo */
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Garante que os elementos fiquem em coluna */
+        align-items: center; /* Centraliza os elementos */
+    }
+
+    .neural-universe-text {
+        text-align: center; /* Centraliza os textos */
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+
+    .neural-universe-text h5 {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        color: #999;
+        margin-bottom: 8px;
+    }
+
+    .neural-universe-text h2 {
+        font-size: 28px; /* Ajusta o tamanho do título */
+        color: #252b42;
+        margin: 15px 0;
+    }
+
+    .neural-universe-text p {
+        font-size: 14px;
+        color: #737373;
+        font-weight: 400;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Alinha os botões verticalmente */
+        gap: 15px; /* Espaçamento entre os botões */
+        margin-bottom: 20px; /* Espaçamento entre os botões e a imagem */
+        width: 30%;
+        margin-left: 120px;
+    }
+
+    .buttons .buy-now {
+        background-color: #007BFF; /* Cor azul */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .buttons .read-more {
+        background-color: transparent;
+        color: #007BFF; /* Azul para o texto */
+        border: 2px solid #007BFF;
+        border-radius: 8px;
+        padding: 12px 12px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .neural-universe-image {
+        position: absolute;
+        margin-top: 320px; /* Espaçamento acima da imagem */
+        width: 100%;
+    }
+
+    .neural-universe-image img {
+        width: 100%;
+        max-width: 350px; /* Limita a largura da imagem */
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+/* Featured Posts Mobile */
+@media (max-width: 768px) {
+    .featured-posts {
+        padding: 20px 10%; 
+        text-align: center;
+        margin-top: 250px;
+    }
+
+    .featured-posts-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .post-card {
+        margin: 0 auto; 
+        max-width: 90%; 
+    }
+
+    .post-image {
+        height: auto; 
+    }
+
+    .post-image img {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .post-content {
+        text-align: left; 
+        padding: 20px; 
+    }
+
+    .learn-more {
+        text-align: left; 
+        justify-content: flex-start; /* Alinha o texto e o ícone à esquerda */
     }
 }
