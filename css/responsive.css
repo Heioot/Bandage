@@ -508,6 +508,7 @@
         position: absolute;
         margin-top: 320px; 
         width: 100%;
+        margin-left: auto;
     }
 
     .neural-universe-image img {

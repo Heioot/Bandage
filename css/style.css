@@ -71,7 +71,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    margin-right: 700px;
+    margin-right: auto;
 }
 
 .nav-links li {
@@ -166,7 +166,6 @@ body {
     color: #fff;
     font-size: 0.8em;
     padding: 2px 6px;
-    border-radius: 50%;
 }
 
 /* Editor's Pick Section */
